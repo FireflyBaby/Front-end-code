@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input表单元素</title>
+</head>
+
+<body>
+    <form action="xxx.php" method="get">
+        <!-- text文本框用户可以输入任何文字 -->
+        <label for="username">用户名：</label><input type="text" name="username" value="请输入用户名" maxlength="6"
+            id="username" /><br />
+        <!-- 密码框，用户看不见的输入 -->
+        密码：<input type="password" name="pwd" /><br />
+        性别：<input type="radio" name="sex" value="男" id="man" /><label for="man">男</label> <input type="radio" name="sex"
+            value="女" id="woman" checked="checked"><label for="woman">女</label><br />
+        <!-- 爱好：吃饭、睡觉、打豆豆 -->
+        <input type="checkbox" name="hobby">吃饭<input type="checkbox" name="hobby">睡觉<input type="checkbox" name="hobby"
+            checked="checked">打豆豆
+        <br />
+        <input type="button" value="获取短信" /><br />
+        <input type="submit" value="数据提交" />
+        <input type="reset" value="清除数据" /><br />
+        文件域，上传文件使用
+        <input type="file" /><br />
+        籍贯：<select>
+            <option>北京</option>
+            <option>天津</option>
+            <option>河北</option>
+            <option>重庆</option>
+            <option selected="selected">火星</option>
+        </select><br />
+        <textarea rows="45" cols="70">
+            这是使用textarea写的
+        </textarea>
+
+    </form>
+</body>
+
+</html>

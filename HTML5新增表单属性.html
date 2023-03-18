@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5新增表单属性</title>
+    <style>
+        input {
+            outline: none;
+        }
+
+        /* 可以修改placeholder里面字体的颜色 */
+        input::placeholder {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="search" required="required" placeholder="pink老师" autofocus="autofocus"><br />
+        <input type="file" multiple="multiple">
+        <input type="submit" value="提交">
+    </form>
+</body>
+
+</html>

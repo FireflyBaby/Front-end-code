@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS三角的强化应用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 0;
+            height: 0;
+            /* border-top: 100px solid transparent;
+            border-right: 50px solid skyblue;
+            border-bottom: 0px solid blue;
+            border-left: 0px solid green; */
+            /* 只保留右边的边框有颜色 */
+            border-color: transparent red transparent transparent;
+            border-style: solid;
+            border-width: 100px 50px 0 0;
+        }
+
+        .price {
+            width: 160px;
+            height: 24px;
+            line-height: 24px;
+            border: 1px solid red;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .discount {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            color: #fff;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        .discount i {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-color: transparent #fff transparent transparent;
+            border-style: solid;
+            border-width: 24px 10px 0 0;
+        }
+
+        .origin {
+            font-size: 12px;
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 50px;
+        }
+
+        .test {
+            width: 300px;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="price">
+        <span class="discount">¥1650
+            <i></i>
+        </span>
+        <span class="origin">¥5650</span>
+    </div>
+    <div class="box2">
+        <span class="test">我是个笨蛋！~</span>
+    </div>
+
+</body>
+
+</html>
