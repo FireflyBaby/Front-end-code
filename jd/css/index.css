@@ -3,14 +3,26 @@ body {
     min-width: 320px;
     max-width: 640px;
     margin: 0 auto;
-    background-color: #ccc;
     font-size: 14px;
     font-family: -apple-system, Helvetica, sans-serif;
     line-height: 1.5;
     color: #666;
-    height: 2000px;
+}
 
+* {
+    /* 点击高亮我们需要清除，设置为transparent完成透明 */
+    -webkit-tap-highlight-color: transparent;
+}
 
+input {
+    /* 在移动端浏览器默认的外观在ios上加上这个属性才能给按钮和输入框自定义样式*/
+    -webkit-appearance: none;
+}
+
+img,
+a {
+    /* 禁用长按页面时的弹出菜单 */
+    -webkit-touch-callout: none;
 }
 
 a {
@@ -170,7 +182,7 @@ img {
 }
 
 nav {
-    /* padding-top: 5px; */
+    padding-top: 5px;
 }
 
 nav a {
