@@ -30,6 +30,21 @@ a {
     text-decoration: none;
 }
 
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.clearfix {
+    /*IE6、7专有*/
+    *zoom: 1;
+}
+
 .app {
     height: 45px;
 }
@@ -182,7 +197,6 @@ img {
 }
 
 nav {
-    overflow: hidden;
     padding-top: 5px;
 }
 
@@ -203,7 +217,6 @@ nav a span {
 
 /* news */
 .news {
-    overflow: hidden;
     padding-top: 10px;
 }
 
