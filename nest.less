@@ -1,0 +1,21 @@
+.header {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+
+    // less嵌套子元素的样式直接写到父元素里面就好了
+    a {
+        color: red;
+    }
+}
+
+.nav {
+    .logo {
+        color: green;
+    }
+
+    // 如果有伪类、交集选择器、伪元素选择器，我们内层选择器的前面需要加&
+    &::before {
+        content: "";
+    }
+}
