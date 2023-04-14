@@ -2,7 +2,6 @@ body {
     min-width: 320px;
     max-width: 750px;
     margin: 0 auto;
-    height: 1200px;
     background-color: #F2F4F7;
 }
 
@@ -120,14 +119,6 @@ a {
         display: -webkit-flex;
         display: flex;
         flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
         transition: 300ms;
         // 其余的兄弟是0.8
         transform: scale(0.8);
@@ -171,36 +162,67 @@ a {
 }
 
 // 学习模块的轮播图
+.study_con {
+    padding-bottom: 3.7333rem;
+}
+
 .study {
-    .swiper {
-        width: 100%;
-        height: 100%;
+    .study_fo {
+        padding: .2667rem;
     }
 
     .swiper-slide {
-        text-align: center;
         font-size: 18px;
         background: #fff;
+        width: 7.7333rem;
+        height: 9.0667rem;
+        background-color: #fff;
+        border-radius: .2667rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
+        h5 {
+            font-size: .6933rem;
+            margin: .5333rem 0;
+            font-weight: 400;
+            padding: 0 .2667rem;
+        }
+
+        p {
+            font-size: .6933rem;
+            color: #FF4400;
+        }
     }
 
-    .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 2.9333rem;
+    width: 100%;
+    background-color: pink;
+    z-index: 999;
+    display: flex;
+    padding: .5333rem;
+    background-color: #fff;
+    border: .0267rem solid #ccc;
+
+    .item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 1.04rem;
+            height: 1.0933rem;
+        }
+
+        p {
+            font-size: .5867rem;
+            color: #666666;
+            margin-top: .2667rem;
+        }
     }
 }
