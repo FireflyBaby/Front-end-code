@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>argument使用</title>
+    <script>
+        function fn() {
+            for (var i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+            }
+        }
+        fn(1, 2, 3, 4, 5);//伪数组，没有真正数组的一些方法pop(),push()等等
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

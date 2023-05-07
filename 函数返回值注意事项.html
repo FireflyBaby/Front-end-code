@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数返回值注意事项</title>
+    <script>
+        function fn(num1, num2) {
+            return num1, num2;//返回的结果是最后一个值
+        }
+        console.log(fn(1, 2));
+        function getResult(num1, num2) {
+            return [num1 + num2, num1 - num2, num1 * num2, num1 / num2];//返回的是一个数组
+        }
+        console.log(getResult(1, 2));
+        function fun2() { }
+        console.log(fun2());//如果没有return，返回undefined
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
