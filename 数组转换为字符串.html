@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // toString()   将数组转换为字符串
+        var arr1 = [1, 2, 3];
+        console.log(arr1.toString());//  1，2，3
+        //join(分隔符)
+        var arr2 = ['green', 'blue', 'pink'];
+        console.log(arr2.join(' '));// green blue pink
+        arr3 = arr1.concat(arr2);//  Array(6) [ 1, 2, 3, "green", "blue", "pink" ]
+        console.log(arr3);
+        console.log(arr3.slice(2, 4));  //Array [ 3, "green" ]
+        console.log(arr3);//数组截取，原数组不变  Array(6) [ 1, 2, 3, "green", "blue", "pink" ]
+        console.log(arr3.splice(2, 2));//Array [ 3, "green" ]
+        console.log(arr3);//数组删除，原数组改变   Array(4) [ 1, 2, "blue", "pink" ]
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
