@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击</button>
+    <p>abc</p>
+    <div class="inner"></div>
+    <div class="create"></div>
+
+    <script>
+        // window.onload = function () {
+        //     document.write('<div>123</div>');
+        // }
+        /* var btn = document.querySelector('button');
+        btn.onclick = function () {
+            // document.write()  创建元素
+            document.write('<div>123</div>');//如果页面文档流加载完毕，再强调这句话会导致页面重绘
+        } */
+        var inner = document.querySelector('.inner');
+        for (var i = 0; i <= 100; i++) {
+            inner.innerHTML += '<a href="#">百度</a>';
+        }
+        var create = document.querySelector('.create');
+        for (var i = 0; i <= 100; i++) {
+            var a = document.createElement('a');
+            create.appendChild(a);
+        }
+        function f1() {
+            var d1 = +new Date();
+            for (var i = 0; i < 1000; i++) {
+                document.body.innerHTML += '<div style="width: 100px;height: 2px;border: 1px solid blue; "></div>'
+            }
+            var d2 = +new Date();
+            console.log(d2 - d1);//898
+        }
+        f1();
+        function f2() {
+            var d1 = +new Date();
+            for (var i = 0; i < 1000; i++) {
+                var div = document.createElement('div');
+                div.style.width = '100px';
+                div.style.height = '2px';
+                div.style.border = '1px solid red';
+                document.body.appendChild(div);
+            }
+            var d2 = +new Date();
+            console.log(d2 - d1);//5
+        }
+        f2();
+        function f3() {
+            var data = [];
+            var d1 = +new Date();
+            for (var i = 0; i < 1000; i++) {
+                data.push('<div style="width: 100px;height: 2px;border: 1px solid blue; "></div>');
+            }
+            document.body.innerHTML = data.join('');
+            var d2 = +new Date();
+            console.log(d2 - d1);//2    采用innerHTML数组的方式创建元素效率最高
+        }
+        f3();
+
+
+    </script>
+</body>
+
+</html>
